@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Fil d'actu — Widget",
+  "version": "1.0.0",
+  "description": "Widget d'actualités (Reuters, AP, AFP, BBC, France 24) construit par analyse des pages, sans RSS.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Fil d'actualité"
+  },
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://www.reuters.com/*",
+    "https://apnews.com/*",
+    "https://factuel.afp.com/*",
+    "https://www.bbc.com/*",
+    "https://www.france24.com/*"
+  ]
+}
