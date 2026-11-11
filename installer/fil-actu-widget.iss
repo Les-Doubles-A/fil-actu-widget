@@ -1,7 +1,7 @@
 ﻿; Installeur Inno Setup de fil-actu-widget. Compilation : iscc installer\fil-actu-widget.iss
-; Le setup est cree dans installer\Output\fil-actu-widget-Setup-1.0.0.exe
+; Le setup est cree dans installer\Output\fil-actu-widget-Setup-1.0.1.exe
 #define MyAppName "fil-actu-widget"
-#define MyAppVersion "1.0.0"
+#define MyAppVersion "1.0.1"
 #define MyAppURL "https://github.com/Les-Doubles-A/fil-actu-widget"
 
 [Setup]
@@ -25,6 +25,8 @@ WizardStyle=modern
 ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 CloseApplications=yes
+SetupIconFile=fil-actu-widget.ico
+UninstallDisplayIcon={app}\fil-actu-widget.ico
 InfoAfterFile=INSTALLATION.txt
 Uninstallable=yes
 
@@ -34,12 +36,14 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
 Source: "INSTALLATION.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "fil-actu-widget.ico"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\icons\*"; DestDir: "{app}\extension\icons"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "..\manifest.json"; DestDir: "{app}\extension"; Flags: ignoreversion
 Source: "..\popup.html"; DestDir: "{app}\extension"; Flags: ignoreversion
 Source: "..\popup.js"; DestDir: "{app}\extension"; Flags: ignoreversion
 
 [Icons]
-Name: "{autoprograms}\{#MyAppName} - dossier de l'extension"; Filename: "{app}\extension"
+Name: "{autoprograms}\{#MyAppName} - dossier de l'extension"; Filename: "{app}\extension"; IconFilename: "{app}\fil-actu-widget.ico"
 Name: "{autoprograms}\{#MyAppName} - instructions"; Filename: "{app}\INSTALLATION.txt"
 
 [Run]

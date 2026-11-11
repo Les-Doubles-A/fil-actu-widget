@@ -7,7 +7,7 @@ Extension navigateur : widget d'actualités (Reuters, AP, AFP, BBC, France 24) c
 <!-- installeur-release -->
 ## Installation
 
-Téléchargez **`fil-actu-widget-Setup-1.0.0.exe`** depuis la [dernière release](https://github.com/Les-Doubles-A/fil-actu-widget/releases/latest), puis lancez-le.
+Téléchargez **`fil-actu-widget-Setup-1.0.1.exe`** depuis la [dernière release](https://github.com/Les-Doubles-A/fil-actu-widget/releases/latest), puis lancez-le.
 
 L'installeur copie l'extension dans `%LOCALAPPDATA%\Programs\fil-actu-widget\extension` puis affiche la marche à suivre :
 
